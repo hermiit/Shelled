@@ -20,9 +20,18 @@
 		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Calculate the info of any(?) 3D vector you input." VerticalAlignment="Top" Margin="0,125,0,0" Height="294" Width="210" FontSize="20" TextAlignment="Center" OpacityMask="#FF6800FF"/>
 		<Grid HorizontalAlignment="Left" Height="360" VerticalAlignment="Top" Width="582" Margin="210,59,0,0" Background="#FF343434">
 			<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="56" Width="381" FontSize="36" TextAlignment="Center" Foreground="#FF9352F0" FontFamily="Segoe UI Semilight"><Run Text="New Vector "/><Run Text="Calculation"/></TextBlock>
-			<Grid Background="#FF343434" Margin="0,56,269,172">
-				<Expander Header="Input" HorizontalAlignment="Left" Height="124" VerticalAlignment="Top" Width="381" Margin="0,0,-68,0" FontSize="20"/>
+			<Grid Background="#FF343434" Margin="0,56,269,0">
+				<Expander x:Name="InputExpand" Header="Input" Width="313" FontSize="20" IsExpanded="True" HorizontalAlignment="Left" Margin="0,0,0,152" Background="#FF272727">
+					<Grid HorizontalAlignment="Left" Height="66" Width="313" Margin="0,0,-2,0" Background="#FF444444">
+						<TextBlock x:Name="X_Text" TextWrapping="Wrap" Margin="0,0,220,33" TextAlignment="Center"><Run Text="X Axis:"/></TextBlock>
+						<TextBlock x:Name="Y_Text" TextWrapping="Wrap" Text="Y Axis:" Margin="0,33,220,0" TextAlignment="Center"/>
+						<TextBox x:Name="X_label" TextWrapping="Wrap" Text="Enter text here..." Margin="98,0,0,33" FontSize="20" TextAlignment="Center" Background="#FF9C9C9C" BorderBrush="{x:Null}"/>
+						<TextBox x:Name="Y_label" TextWrapping="Wrap" Text="Enter text here..." Margin="98,33,0,0" FontSize="20" TextAlignment="Center" Background="#FF9C9C9C" BorderBrush="{x:Null}"/>
+					</Grid>
+				</Expander>
+				<Expander x:Name="OutputExpand" Header="Output&#xD;&#xA;" HorizontalAlignment="Left" Width="313" FontSize="20" Margin="0,152,0,0"/>
 			</Grid>
 		</Grid>
+		<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="737,481,-43,-160" VerticalAlignment="Top" Width="100"/>
 	</Grid>
 </Window>

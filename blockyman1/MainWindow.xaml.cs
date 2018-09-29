@@ -23,7 +23,7 @@ namespace blockyman1
         public MainWindow()
         {
             InitializeComponent();
-            Console.WriteLine("h");
+            Console.WriteLine("He");
         }
     }
 }
